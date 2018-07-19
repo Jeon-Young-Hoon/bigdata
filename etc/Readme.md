@@ -1,0 +1,1 @@
+this is etc folder (ppt, hwp etc..)
