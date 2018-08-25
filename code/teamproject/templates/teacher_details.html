@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Embed Demo</title>
+    {{ js_resources|indent(4)|safe }}
+    {{ css_resources|indent(4)|safe }}
+    {{ plot_script|indent(4)|safe }}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- SITE TITLE -->
+    <title>Ekram - Seo/Digital Agency HTML Template</title>
+    <!-- Latest Bootstrap min CSS -->
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,400i,500,500i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,600,600i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="/static/fonts/font-awesome.min.css">
+    <!--- owl carousel Css-->
+    <link rel="stylesheet" href="/static/owlcarousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="/static/owlcarousel/css/owl.theme.css">
+    <!-- magnific popup CSS -->
+    <link rel="stylesheet" href="/static/css/magnific-popup.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		  <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.13.0.min.js"></script>
+		  <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-api-0.13.0.min.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+
+<!-- START PRELOADER -->
+<div class="preloader">
+    <div class="status">
+        <div class="status-mes"><h4>Ekram</h4></div>
+    </div>
+</div>
+<!-- END PRELOADER -->
+
+<!-- START NAVBAR -->
+{% include 'navbar.html' %}
+<!-- END NAVBAR -->
+
+<!-- START SECTION TOP -->
+<section class="section-top section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="section-top-content">
+                    <h1>한석원</h1>
+                    <ol class="breadcrumb">
+                        <li><a href={{ url_for('index') }}>Home</a></li>
+                        <li class="active">수학</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END SECTION TOP DESIGN -->
+
+<!-- START PROJECT DETAILS -->
+<section class="project_details">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title text-center">
+                    <h2>About Teacher</h2>
+                    <span></span>
+                    <p>선생님에 대한 간단한 설명</p>
+                </div>
+            </div>
+        </div>
+        <div class="row project_details_bg">
+            <div class="col-md-6">
+                <div class="single_project_details_img">
+                    <img src='/static/img/portfolio/한석원.png' class="img-responsive" alt=""/>
+                </div>
+            </div><!-- END COL -->
+            <div class="col-md-6">
+                <div class="single_project_details">
+                    <h3>Teacher Explain</h3>
+                    <dl class="row">
+                        <dt class="col-sm-3">선생님 이름</dt>
+                        <dd class="col-sm-9">A description list is perfect for defining terms.</dd>
+
+                        <dt class="col-sm-3">Euismod</dt>
+                        <dd class="col-sm-9">
+                            <p>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</p>
+                            <p>Donec id elit non mi porta gravida at eget metus.</p>
+                        </dd>
+
+                        <dt class="col-sm-3">Malesuada porta</dt>
+                        <dd class="col-sm-9">Etiam porta sem malesuada magna mollis euismod.</dd>
+
+                        <dt class="col-sm-3 text-truncate">Truncated term is truncated</dt>
+                        <dd class="col-sm-9">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+                            fermentum massa justo sit amet risus.
+                        </dd>
+
+                        <dt class="col-sm-3">Nesting</dt>
+                        <dd class="col-sm-9">
+                            <dl class="row">
+                                <dt class="col-sm-4">Nested definition list</dt>
+                                <dd class="col-sm-8">Aenean posuere, tortor sed cursus feugiat, nunc augue blandit
+                                    nunc.
+                                </dd>
+                            </dl>
+                        </dd>
+                    </dl>
+                </div>
+            </div><!-- END COL -->
+        </div><!-- END ROW -->
+        <div class="row project_details_bg">
+            <div class="col-md-11">
+                <div class="single_project_details">
+                    <h3>Graph</h3>
+                    <p>인기 흐름도</p>
+                    {{ plot_div|indent(4)|safe }}
+                </div>
+            </div>
+        </div><!-- END ROW -->
+        <div class="row project_details_bg">
+            <div class="col-md-6">
+                <div class="single_project_details_img">
+                    <img src="/static/img/project_details_2.png" class="img-responsive" alt=""/>
+                </div>
+            </div><!-- END COL -->
+            <div class="col-md-6">
+                <div class="single_project_details">
+                    <h3>Solution</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti reicis officia impedit itaque
+                        maiores nemo? Lorem ipsum dolor sit amettdt consectetur adipisicing elit. Corrupti reiciendis
+                        officia impedit itaque maiores nemo?</p>
+                </div>
+            </div><!-- END COL -->
+        </div><!-- END ROW -->
+        <div class="row project_details_bg">
+            <div class="col-md-6">
+                <div class="single_project_details">
+                    <h3>Results</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti reicis officia impedit itaque
+                        maiores nemo? Lorem ipsum dolor sit amettdt consectetur adipisicing elit. Corrupti reiciendis
+                        officia impedit itaque maiores nemo?</p>
+                </div>
+            </div><!-- END COL -->
+            <div class="col-md-6">
+                <div class="single_project_details_img">
+                    <img src="/static/img/project_details_1.png" class="img-responsive" alt=""/>
+                </div>
+            </div><!-- END COL -->
+        </div><!-- END ROW -->
+    </div><!-- END CONTAINER -->
+</section>
+<!-- END PROJECT DETAILS -->
+
+
+<!-- START TESTIMONIALS -->
+<section class="customer_say section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title text-center">
+                    <h2>Students Are Saying</h2>
+                    <span></span>
+                    <p>학생들의 댓글을 긍정 하나와 부정 하나씩을 각각 보여준다.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="testimonial-slider" class="owl-carousel">
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img src="/static/img/testimonial/1.jpg" alt="">
+                        </div>
+                        <p class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada vulputate nisi in
+                            fermentum. Vivamus ac libero quis nisi auctor pulvinar. Aenean sit amet lectus.
+                        </p>
+                        <h3 class="title">Syed Ekram</h3>
+                        <small class="post">- Web Developer</small>
+                    </div>
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img src="/static/img/testimonial/2.jpg" alt="">
+                        </div>
+                        <p class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada vulputate nisi in
+                            fermentum. Vivamus ac libero quis nisi auctor pulvinar. Aenean sit amet lectus.
+                        </p>
+                        <h3 class="title">Baby naznin</h3>
+                        <small class="post">- Web Designer</small>
+                    </div>
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img src="/static/img/testimonial/1.jpg" alt="">
+                        </div>
+                        <p class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada vulputate nisi in
+                            fermentum. Vivamus ac libero quis nisi auctor pulvinar. Aenean sit amet lectus.
+                        </p>
+                        <h3 class="title">Syed Ekram</h3>
+                        <small class="post">- Web Designer</small>
+                    </div>
+                    <div class="testimonial">
+                        <div class="pic">
+                            <img src="/static/img/testimonial/2.jpg" alt="">
+                        </div>
+                        <p class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada vulputate nisi in
+                            fermentum. Vivamus ac libero quis nisi auctor pulvinar. Aenean sit amet lectus.
+                        </p>
+                        <h3 class="title">Baby naznin</h3>
+                        <small class="post">- Web Designer</small>
+                    </div>
+                </div>
+            </div><!--- END COL -->
+        </div><!--- END ROW -->
+    </div><!--- END CONTAINER -->
+</section>
+<!-- END TESTIMONIALS -->
+
+<!-- START ADDRESS -->
+<section class="our-address section-padding">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-xs-12 col-sm-4">
+                <div class="single_address">
+                    <img src="/static/img/search-engine.png" alt=""/>
+                    <h4>Our Location</h4>
+                    <p>3481 Melrose Place, Beverly Hills CA 90210</p>
+                </div>
+            </div><!-- END COL -->
+            <div class="col-xs-12 col-sm-4">
+                <div class="single_address">
+                    <img src="/static/img/phone-receiver.png" alt=""/>
+                    <h4>Telephone</h4>
+                    <p>(+1) 517 397 7100</p>
+                </div>
+            </div><!-- END COL -->
+            <div class="col-xs-12 col-sm-4">
+                <div class="single_address">
+                    <img src="/static/img/mailing.png" alt=""/>
+                    <h4>Send email</h4>
+                    <p>Info@example.com</p>
+                </div>
+            </div><!-- END COL -->
+        </div><!-- END ROW -->
+    </div><!--- END CONTAINER -->
+</section>
+<!-- END ADDRESS -->
+
+<!-- START FOOTER -->
+{% include 'footer.html' %}
+<!-- END FOOTER -->
+
+<!-- Latest jQuery -->
+<script src="/static/js/jquery-1.12.4.min.js"></script>
+<!-- Latest compiled and minified Bootstrap -->
+<script src="/static/bootstrap/js/bootstrap.min.js"></script>
+<!-- modernizr JS -->
+<script src="/static/js/modernizr-2.8.3.min.js"></script>
+<!-- magnific-popup js -->
+<script src="/static/js/jquery.magnific-popup.min.js"></script>
+<!-- jquery mixitup js -->
+<script src="/static/js/jquery.mixitup.min.js"></script>
+<!-- owl-carousel min js  -->
+<script src="/static/owlcarousel/js/owl.carousel.min.js"></script>
+<!-- scrolltopcontrol js -->
+<script src="/static/js/scrolltopcontrol.js"></script>
+<!-- scripts js -->
+<script src="/static/js/scripts.js"></script>
+</body>
+</html>
