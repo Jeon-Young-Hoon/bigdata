@@ -5,6 +5,9 @@ from bokeh.plotting import figure
 from bokeh.resources import INLINE
 from bokeh.util.string import encode_utf8
 
+from flask import send_file
+
+
 app = Flask(__name__)
 
 
