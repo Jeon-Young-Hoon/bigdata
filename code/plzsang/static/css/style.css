@@ -657,7 +657,7 @@ transition: all 0.3s ease-out 0s;
     color: #556df4;
 }
 .serviceBox .description{
-
+     height: 100px;
 }
 .serviceBox .read-more{
     display: block;
@@ -1764,7 +1764,7 @@ font-weight: 500;
 * ----------------------------------------------------------------------------------------
 */
 .footer_area {
-background: #2f3032 url("../img/bg/confetti_wqhed2.png") no-repeat 50% 50%/1301px 601px;
+background: #2f3032 no-repeat 50% 50%/1301px 601px;
 padding-top:60px;
 }
 
