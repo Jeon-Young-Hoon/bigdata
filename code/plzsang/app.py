@@ -5,10 +5,38 @@ from bokeh.plotting import figure
 from bokeh.resources import INLINE
 from bokeh.util.string import encode_utf8
 
-from flask import send_file
-
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
+db = SQLAlchemy(app)
+
+
+class data(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    date = db.Column(db.String(80))
+    name = db.Column(db.String(80))
+    content = db.Column(db.String(80))
+    source = db.Column(db.String(80))
+
+    def __repr__(self):
+        return '<Text %r>' % self.name
+
+admin.add_view(TestModelView(data, db.session))
+
+
+def load_data():
+    import pandas as pd
+    df = pd.read_csv('final.csv')
+    for i in range(len(df)):
+        id, date, name, content, source = df.iloc[i]
+        me = data(id=int(id),date=date,name=name,content=content,source=source)
+        db.session.add(me)
+
+        if i % 5000 == 0:
+            print(i)
+    db.session.commit()
+    print('finish')
 
 
 @app.route('/')
@@ -82,6 +110,8 @@ def blog():
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
+
+
 
 
 if __name__ == '__main__':
