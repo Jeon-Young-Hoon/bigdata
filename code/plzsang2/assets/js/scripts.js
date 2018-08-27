@@ -116,6 +116,22 @@ Version      : 1.0
 				
 })($);
 
+$('#banner1 > .slider').slick({
+
+	autoplay: true,
+
+	dots: true,
+
+	infinite: true,
+
+	speed: 300,
+
+	prevArrow:'',
+
+	nextArrow:''
+
+});
+
 
   
 

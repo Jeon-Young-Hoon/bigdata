@@ -258,8 +258,8 @@ color: #fff;
     background-color: transparent;
 }
 .navbar-brand { padding: 0px }
-.navbar-brand img { width: 150px;}
-@media only screen and (max-width:480px) { 
+.navbar-brand img { width: 150px; }
+@media only screen and (max-width:480px) {
 .navbar-brand img {margin-left:10px; }
 }
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
@@ -1861,3 +1861,8 @@ padding: 0;
 * .END SECTION TOP DESIGN
 * ----------------------------------------------------------------------------------------
 */
+
+.video-fluid {
+    width: 100%;
+    height: auto;
+}

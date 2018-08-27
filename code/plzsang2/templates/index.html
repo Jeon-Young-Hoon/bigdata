@@ -25,6 +25,8 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/video.css">
+
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -50,16 +52,33 @@
 <!-- START HOME -->
 <section id="home" class="welcome-area"
          style="background-image: url(/static/img/bg/student-849825_1920.jpg);  background-size:cover; background-position: center center;">
-    <div class="video-container">
-    <div class="jetpack-video-wrapper"><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" src="https://www.youtube.com/embed/dFVxGRekRSg?version=3&rel=1&fs=1&autohide=2&showsearch=0&showinfo=1&iv_load_policy=1&wmode=transparent" allowfullscreen="true" style="border: 0px; display: block; margin: 0px; width: 560px; height: 315px;" data-ratio="0.5625" data-width="560" data-height="315"></iframe></span></div>
+    <div class="slide_banner" id="banner1">
+        <ul class="slider bg_cy">
+            <li>
+                <a href="#" target="_blank" style="background: url('aaa.png') repeat">
+                    <img src="bbb.png" alt=""/>
+                </a>
+            </li>
+            <li>
+                <a href="#" target="_blank" style="background: url('aaa.png') repeat">
+                    <img src="bbb.png" alt=""/>
+                </a>
+            </li>
+            <li>
+                <a href="#" target="_blank" style="background: url('aaa.png') repeat">
+                    <img src="bbb.png" alt=""/>
+                </a>
+            </li>
+        </ul>
     </div>
+
 
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
                 <div class="hero-text">
-                    <h2>인생강의</h2>
-                    <p>teacher brend analysis</p>
+                    <h2>당신의 인생강의를 찾아드립니다.</h2>
+                    <h3 style="color: white;">teacher brend analysis</h3>
                     <a class="btn btn-default btn-home-bg page-scroll" href={{ url_for('project_one') }}>Get Start</a>
                     <a class="btn btn-default btn-home-bg page-scroll" href={{ url_for('about') }}>More learn</a>
                 </div>
@@ -136,72 +155,6 @@
 {#		<!-- END ABOUT US TWO -->#}
 {#	#}
 <!-- START SERVICE CONTENT -->
-<section class="service">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="section-title text-center">
-                    <h2>서비스에 대하여</h2>
-                    <span></span>
-                    <p>서비스의 특징</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-3">
-                <div class="serviceBox">
-                    <div class="service-icon">
-                        <span><img src="/static/img/service-icon/1.png" alt=""/></span>
-                    </div>
-                    <div class="service-content">
-                        <h3 class="title">데이터 시각화</h3>
-                        <p class="description">선생님의 인기 흐름도를<br>시간별로 그래프로 확인</p>
-                        <a href="#" class="read-more fa fa-plus"></a>
-                    </div>
-                </div>
-            </div><!--- END COL -->
-            <div class="col-xs-12 col-sm-3">
-                <div class="serviceBox">
-                    <div class="service-icon">
-                        <span><img src="/static/img/service-icon/2.png" alt=""/></span>
-                    </div>
-                    <div class="service-content">
-                        <h3 class="title">특징 추출</h3>
-                        <p class="description">각 선생님의 특징을 뽑아내어 <br>학생들이 선생님의 특징을 <br>쉽게 확인</p>
-                        <a href="#" class="read-more fa fa-plus"></a>
-                    </div>
-                </div>
-            </div><!--- END COL -->
-            <div class="col-xs-12 col-sm-3">
-                <div class="serviceBox">
-                    <div class="service-icon">
-                        <span><img src="/static/img/service-icon/3.png" alt=""/></span>
-                    </div>
-                    <div class="service-content">
-                        <h3 class="title">실시간 분석</h3>
-                        <p class="description">실시간으로 선생님들의 강의에 대한 데이터를 받아와서 <br>내용 업데이트를 실시</p>
-                        <a href="#" class="read-more fa fa-plus"></a>
-                    </div>
-                </div>
-            </div><!--- END COL -->
-            <div class="col-xs-12 col-sm-3">
-                <div class="serviceBox">
-                    <div class="service-icon">
-                        <span><img src="/static/img/service-icon/4.png" alt=""/></span>
-                    </div>
-                    <div class="service-content">
-                        <h3 class="title">추천 시스템</h3>
-                        <p class="description">학생들의 공부 스타일에 맞추어 적절한 선생님을 추천</p>
-                        <a href="#" class="read-more fa fa-plus"></a>
-                    </div>
-                </div>
-            </div><!--- END COL -->
-        </div><!--- END ROW -->
-    </div><!--- END CONTAINER -->
-</section>
-<!-- END SERVICE CONTENT -->
-
-<!-- START COUNTER -->
 <section class="complete-project-area counter_feature"
          style="background-image: url(/static/img/bg/team-3373638_1920.jpg);  background-size:cover; background-position: center center;background-attachment:fixed;">
     <div class="container">
@@ -223,6 +176,72 @@
         </div><!-- END ROW -->
     </div><!-- END CONTAINER -->
 </section>
+<!-- END SERVICE CONTENT -->
+
+<!-- START COUNTER -->
+{#<section class="service">#}
+{#    <div class="container">#}
+{#        <div class="row">#}
+{#            <div class="col-md-12">#}
+{#                <div class="section-title text-center">#}
+{#                    <h2>서비스에 대하여</h2>#}
+{#                    <span></span>#}
+{#                    <p>서비스의 특징</p>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#        <div class="row">#}
+{#            <div class="col-xs-12 col-sm-3">#}
+{#                <div class="serviceBox">#}
+{#                    <div class="service-icon">#}
+{#                        <span><img src="/static/img/service-icon/1.png" alt=""/></span>#}
+{#                    </div>#}
+{#                    <div class="service-content">#}
+{#                        <h3 class="title">데이터 시각화</h3>#}
+{#                        <p class="description">선생님의 인기 흐름도를<br>시간별로 그래프로 확인</p>#}
+{#                        <a href="#" class="read-more fa fa-plus"></a>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div><!--- END COL -->#}
+{#            <div class="col-xs-12 col-sm-3">#}
+{#                <div class="serviceBox">#}
+{#                    <div class="service-icon">#}
+{#                        <span><img src="/static/img/service-icon/2.png" alt=""/></span>#}
+{#                    </div>#}
+{#                    <div class="service-content">#}
+{#                        <h3 class="title">특징 추출</h3>#}
+{#                        <p class="description">각 선생님의 특징을 뽑아내어 <br>학생들이 선생님의 특징을 <br>쉽게 확인</p>#}
+{#                        <a href="#" class="read-more fa fa-plus"></a>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div><!--- END COL -->#}
+{#            <div class="col-xs-12 col-sm-3">#}
+{#                <div class="serviceBox">#}
+{#                    <div class="service-icon">#}
+{#                        <span><img src="/static/img/service-icon/3.png" alt=""/></span>#}
+{#                    </div>#}
+{#                    <div class="service-content">#}
+{#                        <h3 class="title">실시간 분석</h3>#}
+{#                        <p class="description">실시간으로 선생님들의 강의에 대한 데이터를 받아와서 <br>내용 업데이트를 실시</p>#}
+{#                        <a href="#" class="read-more fa fa-plus"></a>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div><!--- END COL -->#}
+{#            <div class="col-xs-12 col-sm-3">#}
+{#                <div class="serviceBox">#}
+{#                    <div class="service-icon">#}
+{#                        <span><img src="/static/img/service-icon/4.png" alt=""/></span>#}
+{#                    </div>#}
+{#                    <div class="service-content">#}
+{#                        <h3 class="title">추천 시스템</h3>#}
+{#                        <p class="description">학생들의 공부 스타일에 맞추어 적절한 선생님을 추천</p>#}
+{#                        <a href="#" class="read-more fa fa-plus"></a>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div><!--- END COL -->#}
+{#        </div><!--- END ROW -->#}
+{#    </div><!--- END CONTAINER -->#}
+{#</section>#}
 <!-- END COUNTER -->
 
 <!-- START PROJECT DETAILS -->
