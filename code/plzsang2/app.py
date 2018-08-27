@@ -57,7 +57,7 @@ def load_data():
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('project_one.html')
 
 
 @app.route('/about')
