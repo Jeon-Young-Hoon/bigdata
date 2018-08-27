@@ -7,49 +7,9 @@ from bokeh.util.string import encode_utf8
 
 from flask import send_file
 
-from flask_admin import Admin
-from flask_admin.contrib.sqla import ModelView
-from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=True
-
-db = SQLAlchemy(app)
-admin = Admin(app)
-
-class TestModelView(ModelView):
-    can_create = False
-    can_edit = False
-    can_delete = False
-    can_view_details = True
-
-
-class data(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    date = db.Column(db.String(80))
-    name = db.Column(db.String(80))
-    content = db.Column(db.String(80))
-    source = db.Column(db.String(80))
-
-    def __repr__(self):
-        return '<Text %r>' % self.name
-
-admin.add_view(TestModelView(data, db.session))
-
-def load_data():
-    import pandas as pd
-    df = pd.read_csv('final.csv')
-    for i in range(len(df)):
-        id, date, name, content, source = df.iloc[i]
-        me = data(id=int(id),date=date,name=name,content=content,source=source)
-        db.session.add(me)
-
-        if i % 5000 == 0:
-            print(i)
-    db.session.commit()
-    print('finish')
 
 @app.route('/')
 def index():
