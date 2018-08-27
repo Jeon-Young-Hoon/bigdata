@@ -9,8 +9,11 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
 
+from data import plotdata
+from data import plotdata2
+
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test2.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=True
 admin=Admin(app)
 db = SQLAlchemy(app)
@@ -39,10 +42,11 @@ admin.add_view(TestModelView(data, db.session))
 
 def load_data():
     import pandas as pd
-    df = pd.read_csv('final.csv')
+    df = pd.read_csv('final2.csv')
+    print(df)
     for i in range(len(df)):
-        id, date, name, content, source = df.iloc[i]
-        me = data(id=int(id),date=date,name=name,content=content,source=source)
+        _,index, date, name, content, source = df.iloc[i]
+        me = data(id=int(index),date=date,name=name,content=content,source=source)
         db.session.add(me)
 
         if i % 5000 == 0:
@@ -85,23 +89,40 @@ def contact():
 def teacher_details():
     # init a basic bar chart:
     # http://bokeh.pydata.org/en/latest/docs/user_guide/plotting.html#bars
-    fig = figure()
-    fig.sizing_mode = 'scale_width'
-    fig.line([1, 2, 3, 4, 5], [6, 7, 2, 4, 5], line_width=2)
+
+
+
     # grab the static resources
     js_resources = INLINE.render_js()
     css_resources = INLINE.render_css()
 
     # render template
-    script, div = components(fig)
-    html = render_template(
-        'teacher_details.html',
-        plot_script=script,
-        plot_div=div,
-        js_resources=js_resources,
-        css_resources=css_resources,
-    )
+    script, div1 = plotdata()
+    script2, div2 = plotdata2()
+    html = render_template('teacher_details.html',
+                           script=script, div1=div1,
+                           script2=script2, div2=div2,
+                           js_resources=js_resources,
+                           css_resources=css_resources,
+                           )
+
     return encode_utf8(html)
+
+
+
+
+    #script2, div2=components(fig)
+    #script, div = components(fig)
+    #html = render_template(
+    #    'teacher_details.html',
+    #    plot_script=script,
+    #    plot_div=div,
+    #    plot_script2 =script2,
+    #    plot_div2 =div2,
+    #    js_resources=js_resources,
+    #    css_resources=css_resources,
+    #)
+    #return encode_utf8(html)
 
 
 @app.route('/project_details')
