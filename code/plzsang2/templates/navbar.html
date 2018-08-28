@@ -7,8 +7,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href={{ url_for('index') }} class="navbar-brand" ><img src="/static/img/book.png" height="30" width="38" alt="logo">
-                <h1 style="font-weight: bold">강의를 부탁해</h1>
+            <a href={{ url_for('index') }} ><img src="/static/img/logo3.png" height="100" width="300" alt="logo">
+
             </a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -37,15 +37,15 @@
 {#                </form>#}
 {#            </div>#}
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="{{ url_for('index') }}">Home</a></li>
-                <li><a href="{{ url_for('about') }}">About</a>
+                <li><a href="{{ url_for('index') }}">홈</a></li>
+                <li><a href="{{ url_for('about') }}">어떤 알고리즘인가요?</a>
                     <ul class="sub-menu">
                         <li><a href="{{ url_for('faq') }}">기술적 질문</a></li>
                         <li><a href="{{ url_for('project_details') }}">프로젝트 과정</a></li>
                     </ul>
                 </li>
                 {#							<li><a href="service.html">Analisys</a></li>#}
-                <li><a href="#">Analysis</a>
+                <li><a href="#">분석</a>
                     <ul class="sub-menu">
                         <li><a href="{{ url_for('project_one') }}">선생님 선택</a></li>
                     </ul>
@@ -56,7 +56,7 @@
                 {#									<li><a href="blog-post.html">Blog Details</a></li>#}
                 {#								</ul>#}
                 {#							</li>#}
-                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <li><a href="{{ url_for('contact') }}">연락처</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div>
